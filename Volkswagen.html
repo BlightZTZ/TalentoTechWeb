@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolksWagen</title>
+</head>
+<body id="body">
+   <div class="selector-tema">
+      <select name="" id="tema" onchange="cambiarTema ()">
+         <option value="ligth">Claro</option>
+         <option value="dark">Oscuro</option>
+         <option value="violet">Aleatorio</option>     
+    </select>
+    <select onchange="cambiarTamanoLogo(value)">
+        <option value="small">Pequeño</option>
+        <option value="medium">Normal</option>
+        <option value="large">Grande</option>
+    </select>
+   </div>
+<div style="margin: 0 10em;">
+   <div style="text-align: center;">
+    <img class="a" src="VW_Logo.jpg" alt="Volklswagen Logo" id="logo">
+    </div>
+
+    <h1 style="text-align: center;">VolksWagen</h1>
+    <hr>
+
+    <p> Empresa multinacional de vehiculos automores, fundada por el partido nacionalsocialista obrero Alemán el 28 de mayo de 1937 en la ciudad de Berlín.</p>
+     <!--Servicios-->  
+     <h2> Servicios  </h2>
+
+        <ol>
+          <li> Mantenimineto y limpieza del sistema de admisión y Camara de combustión </li> 
+          <li> Servicio de taller y latoneria. </li>
+          <li> Descontaminación de pintura y cristales. </li>
+          <li> Cambio de filtros y liquidos. </li>
+       </ol>
+       
+       <br>
+
+     <h3><i class="fa-solid" fa-comments"></i> Datos de Contacto</h3>
+     <!--Datos de Contacto-->
+     <ul>
+         <li><a id="fb" href="https://twitter.com/VW/" target="_blank">TwitterVW</a>
+         <br>
+         <li><a id="ig="href="https://www.instagram.com/volkswagen_colombia/?utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKOopfSiu7YyxSKeorOZZ1gg9DrUkQ614XG9bb_QhWvU3ycQ6PSFfQaApogEALw_wcB/" target="_blank">InstagramVW/Col</a>
+         <br>
+         <li><a id="lk" href="https://www.linkedin.com/company/volkswagen-co/?utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKOopfSiu7YyxSKeorOZZ1gg9DrUkQ614XG9bb_QhWvU3ycQ6PSFfQaApogEALw_wcB/" target="_blank">LinkedingVW/Col</a>
+         <br>
+     </ul>
+
+
+     <h3> Video de presentación </h3>
+     <div style="text-align: center;"> 
+     <iframe width="650" height="370" alt="250" src="https://www.youtube.com/embed/BfC6UU4p_0E?si=7uWQIUibludwJ6YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+    <div style="text-align: center;">
+      <h2> VolksWagen-Berlín</h2>
+      <a href="https://www.volkswagen-automobile-berlin.de/neuwagen/volkswagen?etcc_med=SEA&etcc_par=Google&etcc_cmp=2023-VW-PKW&etcc_grp=158639679755&etcc_bky=vw%20volkswagen&etcc_mty=b&etcc_plc=&etcc_ctv=688115023407&etcc_bde=c&etcc_var=CjwKCAjwrcKxBhBMEiwAIVF8rO7XiCrvEekzbe7NkYcd9IUYcp7D0yrIPyTXeIaUgMLZjW05LWtqJxoCvHEQAvD_BwE&gad_source=1&gclid=CjwKCAjwrcKxBhBMEiwAIVF8rO7XiCrvEekzbe7NkYcd9IUYcp7D0yrIPyTXeIaUgMLZjW05LWtqJxoCvHEQAvD_BwE/" target="_blank">Volkswagen-Automobile-Berlin</a>
+      </div>
+
+      <table>
+         <hr>
+         <!-- Formulario -->
+         <div style="text-align: center;">
+         <h2>Formulario</h2>
+       </table>
+<form method="POST">   
+<fieldset>
+    <!--Campo de texto-->
+     <legend>Información Personal</legend>
+     <label for="">Nombre</label>
+     <input type="text" placeholder="Nombre" name="Nombre">
+    <br>
+
+   <!--Cedula-->
+    <label for=""> Cedula:</label>
+    <input type="number"  id="Cedula" required placeholder="Cedula">
+    <br>
+
+   <!--Fecha de Nacimiento-->
+    <label for="">Fecha de nacimiento</label>
+    <input type="date" id="fecha_nacimiento" required min="1960-01-01" max="2024-12-31" value="2024-12-31" name="fecha_nacimiento">
+     <br>
+
+   <!--Dirección-->
+    <label for="">Dirección</label>
+    <input type="text" placeholder="Ingrese su Dirección" name="Dirección">
+     <br>
+
+</fieldset>
+
+<fieldset>
+   <!--Seleccion de ciudad-->
+  <label for="">Escoja su Ciudad</label>
+  <select name="" id="">
+      <option value=""></option>
+      <option value="Berlín">Berlín</option>
+      <option value="Múnich">Múnich</option>
+      <option value="Ausgurgo">Ausburgo</option>
+      <option value="Neuss">Neuss</option>
+      <option value="Wuppertal">Wuppertal</option>
+      <option value="Lübeck">Lübeck</option>
+      <option value="Gelsenkirchen">Gelsenkirchen</option>
+      <option value="Darmstadt">Darmstadt</option>
+      <option value="Wurzburgo">Wurzburgo</option>
+      <option value="Bonn">Bonn</option>
+   </select>
+
+
+   <!--Correo Electronico-->
+   <legend>Información de Contacto</legend>
+    <label for="email">Correo Electronico</label>
+    <input type="email" required placeholder="Ingresar Correo" name="email">
+   <br>
+
+</fieldset>
+
+<fieldset>
+
+   <!--Documentos Anexos-->
+   <legend>Anexar Documentos</legend>
+    <label for="">Subir Documentos</label>
+    <input type="file"required placeholder="Anexar Documentos" accept="img/*" name="Anexar_Documentos">
+
+</fieldset>
+
+   <!--Envíar-->
+    <button for="">Enviar Formulario</button>
+   <br>
+    <div style="text-align: center;">
+    <table style="background-color: rgb(255, 255, 255);">
+       <!--Encabezado-->
+      <h1>Tabla de Datos</h1>
+
+      <div style="text-align: center;">
+    <tr style="background-color: rgb(87, 189, 193);">
+        <th style="border: 3px solid black">Mes</th>
+        <th style="border: 3px solid black">Ventas (€)</th>
+        <th style="border: 3px solid black">Año</th>
+        <th style="border: 3px solid black">Total de ventas del año</th>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Enero</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr> 
+        <td style="border: 3px solid black">Febrero</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Marzo</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Junio</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Julio</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Agosto</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Septiembre</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Octubre</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Noviembre</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+    </tr>
+    <tr>
+        <td style="border: 3px solid black">Diciembre</td>
+        <td style="border: 3px solid black">7.250.000</td>
+        <td style="border: 3px solid black">2023</td>
+        <td style="border: 3px solid black">87.000 Millones de Euros</td>
+    </div>
+    </tr>
+   </table> 
+<br>
+</div>
+</body>
+<script>
+
+    function cambiarTema(){
+        var body = document.getElementById("body")
+        var tema = document.getElementById("tema").value
+        var fondo = ""
+        var letra = ""
+        if(tema == "light"){
+            fondo = "white"
+            letra = "black"
+        } else if(tema == "dark"){
+            fondo = "black"
+            letra = "white"
+        } else if(tema == "crazy"){
+            fondo = "violet"
+            letra = "#47033a"        }
+        body.style.backgroundColor = fondo
+        body.style.color = letra
+    } 
+
+    function enviarFormulario(){
+        var nombre = document.getElementById("Nombre").value
+        var cedula = document.getElementById("Apellidos").value
+        var fecha_de_nacimiento = document.getElementById("Fecha de nacimiento").value
+        var direccion = document.getElementById("Dirección").value
+        var escoja_su_ciudad = document.getElementById("Escoja su dirección").value
+        var correo_electronico = document.getElementById("Correo Electronico").value
+        var subir_documentos = document.getElementById("Subir Documentos").value
+
+        if(nombre && apellidos){
+            alert("Los datos del formulario son: " + nombre + " " + cedula + " " + fecha_de_nacimiento + " " + direccion + " " + escoja_su_ciudad + " " + correo_electronico + " " + subir_documentos)
+        }
+    }
+
+    function cambiarTamanoLogo(tamano){
+        var logo = document.getElementById("logo")
+        var tamanoLogo = 0
+        if(tamano == "small"){
+            tamanoLogo = 300
+        }else if(tamano == "medium"){
+            tamanoLogo = 600
+        }else if(tamano == "large"){
+            tamanoLogo = 900
+        }
+        logo.style.width = tamanoLogo + "px"
+    }
+</script> 
+
+
+</html>
