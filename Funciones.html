@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return/Funcion</title>
+</head>
+<body>
+    
+
+<script>
+    /** Crear una funcion que reciba 4 números y retorne el promedio*/
+function promedio(num1,num2,num3,num4){
+    return (num1+num2+num3+num4)/4  //7.5
+}
+var resultado = promedio(4,12,6,8)
+document.write("El promedio es: " + resultado)
+</script>
+
+<script>
+/* Crear una función que reciba un número y retorne a su factorial*/
+function factorial(num){ // 7
+ var calculo=1;
+  for(var i=num; i>0; i--){
+     calculo = calculo*i // 1*7 =7*6 =42*5 =210*4= 840*3= 2520*2= 5040*1
+  }
+   return calculo
+}
+
+var calculoFactorial = factorial(7)
+document.write("El factoria es:" + calculoFactorial)
+
+</script>
+
+
+<script>
+    //*Crear una funcion que receiba una edad y retorne si es apto para votar
+
+ 
+function  aptoVotar(edad){
+      if(edad >=18){
+         return "Si"
+      }else{
+          return "No"
+      }
+    }
+var validarEdad = aptoVotar(16)
+document.write("Es appto para votar? " + validarEdad)
+
+</script>
+
+<script>
+    /*Crear un factorial que reciba un Array de números y retorne el número mas alto*/
+    
+    function numeroMayor(array){
+        var mayor=arryay[0]
+        for(var i=0; <= array.lenght; i++){
+            if(array[i] > mayor){
+                mayor = array[i]
+            }
+        }
+        return mayor
+    }
+var numeros =[100,75,40,5,82,777]
+document.write("El número mayor es:" + numeroMayor(numeros))
+</script>
+
+<script>
+/* Crear una funcion que reciba un array de números y retorne el número mas bajo*/
+
+ function numeroMenor(array){
+    var menor=array[0]
+    for(var i=0; >= array.lenght; i++){
+        if(array[i] < menor){
+
+        }
+    }
+    return menor
+ }
+ var numeros =[200,1,26,78,44,3]
+ document.write("El número mayor es:" + numeroMenor(numeros))
+</script>
+</body>
+</html>
