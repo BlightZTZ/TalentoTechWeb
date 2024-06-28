@@ -4,247 +4,455 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolksWagen</title>
-</head>
-<body id="body">
-   <div class="selector-tema">
-      <select name="" id="tema" onchange="cambiarTema ()">
-         <option value="ligth">Claro</option>
-         <option value="dark">Oscuro</option>
-         <option value="violet">Aleatorio</option>     
-    </select>
-    <select onchange="cambiarTamanoLogo(value)">
-        <option value="small">Pequeño</option>
-        <option value="medium">Normal</option>
-        <option value="large">Grande</option>
-    </select>
-   </div>
-<div style="margin: 0 10em;">
-   <div style="text-align: center;">
-    <img class="a" src="VW_Logo.jpg" alt="Volklswagen Logo" id="logo">
-    </div>
+    <style>
+        .Contenido {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin: 0 50px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 11px rgb(0, 0, 0) ;
+            transition: background-color 0.7s, color 0.7s;
+        }
+        
+        .Imagen_logo {
+            width: 300px;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+            transition: width 0.5s;
+        }
 
-    <h1 style="text-align: center;">VolksWagen</h1>
+        .Titulo {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            color: #050526;
+            transition: color 0.5s;
+
+        }
+
+        .Subtitulo {
+            text-align: center;
+            color: #033283;
+            transition: color 0.5s;
+        }
+
+        .Parrafo {
+            text-align: left;
+            margin: 20px 0;
+            transition: color 0.5s;
+        }
+
+        .Lista-ol, .Lista-ul {
+            margin: 20px 0;
+            padding: 0 20px;
+            color: #000000;
+            transform: color 0.5s;
+        }
+
+        .Lista-ol li, .Lista-ul li {
+            margin: 5px 0;
+        }
+
+        .Video {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .Enlace {
+            color: indigo;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: color 0.5s;
+        }
+
+        .Enlace:hover {
+            text-decoration: underline;
+        }
+
+        .Formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: backgrond-color 0.5s, border-color 0.5s;
+        }
+
+        .Formulario fieldset {
+            border: 1px solid #8f0909;
+            border-radius: 10px;
+            padding: 20px;
+            transition: border-color 0.5s;
+
+        }
+
+        .Formulario legend {
+            font-weight: bold;
+            color: #000000;
+            transition: color 0.5s;
+        }
+
+        .Formulario label {
+            margin: 10px 0;
+            color: #000000;
+            transition: color 0.5s;
+        }
+
+        .Formulario input, .Formulario textarea, .Formulario select {
+            width: 97%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #a69d9d;
+            border-radius: 5px;
+            transition: background-color 0.7s, border-color 0.5s, color 0.5s; 
+        }
+
+        .Formulario button {
+            width:100%;
+            padding: 10px;
+            background-color: #a10446;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.7s; ;
+        }
+
+        .Formulario button:hover {
+            background-color: #f63f3f;
+        }
+
+        .Tabla-De-Ventas-2023 {
+            background-color: #564e4e;
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .Configuracion
+        {
+            margin:  10px 0px 10px; 
+        } 
+
+        .Configuracion label {
+            margin: 100px 10px 60px 50px; 
+            transition: color 0.5s;
+        }
+
+        .Configuracion select {
+            display: inline-block; /* Mostrar en línea */
+            padding: 7px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+        }
+
+        body {
+            background-color: #ffffff;
+            transition: background-color 0.7s, color 0.7s;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="Configuracion">
+
+        <label for="color-pagina">Seleccione el tema de la página</label>
+        <select id="color-pagina" onchange="cambiarColorPagina()">
+            <option value="light">Claro</option>
+            <option value="dark">Oscuro</option>
+            <option value="Random">Colorido</option>
+        </select>
+
+        <label for="tamano-logo">Selecciona el tamaño del logo:</label>
+        <select id="tamano-logo" onchange="cambiarTamanoLogo()">
+            <option value="pequeno">Pequeño</option>
+            <option value="normal">Normal</option>
+            <option value="grande">Grande</option>
+            <option value="extra_grande">Exta Grande</option>
+        </select>
+    </div>
+    
+    <div class="Contenido">
+        <img class="Imagen_logo" src="VW_Logo_1935.png" alt="VolksWagen Logo">
+    </div>
+    <h1 class="Titulo">Volklswagen</h1>
     <hr>
 
-    <p> Empresa multinacional de vehiculos automores, fundada por el partido nacionalsocialista obrero Alemán el 28 de mayo de 1937 en la ciudad de Berlín.</p>
-     <!--Servicios-->  
-     <h2> Servicios  </h2>
+    <p class="Parrafo">Empresa multinacional de vehiculos automores, fundada por el partido nacionalsocialista obrero Alemán el 28 de mayo de 1937 en la ciudad de Berlín.</p>
 
-        <ol>
-          <li> Mantenimineto y limpieza del sistema de admisión y Camara de combustión </li> 
-          <li> Servicio de taller y latoneria. </li>
-          <li> Descontaminación de pintura y cristales. </li>
-          <li> Cambio de filtros y liquidos. </li>
-       </ol>
-       
-       <br>
+    <h2 class="Subtitulo">Servicios</h2>
 
-     <h3><i class="fa-solid" fa-comments"></i> Datos de Contacto</h3>
-     <!--Datos de Contacto-->
-     <ul>
-         <li><a id="fb" href="https://twitter.com/VW/" target="_blank">TwitterVW</a>
-         <br>
-         <li><a id="ig="href="https://www.instagram.com/volkswagen_colombia/?utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKOopfSiu7YyxSKeorOZZ1gg9DrUkQ614XG9bb_QhWvU3ycQ6PSFfQaApogEALw_wcB/" target="_blank">InstagramVW/Col</a>
-         <br>
-         <li><a id="lk" href="https://www.linkedin.com/company/volkswagen-co/?utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKOopfSiu7YyxSKeorOZZ1gg9DrUkQ614XG9bb_QhWvU3ycQ6PSFfQaApogEALw_wcB/" target="_blank">LinkedingVW/Col</a>
-         <br>
-     </ul>
+    <ol class="Lista-ol">
+        <li> Mantenimineto y limpieza del sistema de admisión y Camara de combustión </li> 
+        <li> Servicio de taller y latoneria. </li>
+        <li> Descontaminación de pintura y cristales. </li>
+        <li> Cambio de filtros y liquidos. </li>
+    </ol>
 
+    <h3><i class="fa-solid" fa-comments"></i> Datos de Contacto</h3>
+    <ul class="Lista-ul">
+        <li><a id="fb" href="https://twitter.com/VW/" target="blank">TwitterVW</a>
+        <li><a id="ig"href="https://www.instagram.com/volkswagen_colombia/?utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKOopfSiu7YyxSKeorOZZ1gg9DrUkQ614XG9bb_QhWvU3ycQ6PSFfQaApogEALw_wcB/" target="blank">InstagramVW/Col</a>
+        <li><a id="lk" href="https://www.linkedin.com/company/volkswagen-co/?utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&utm_source=google&utm_medium=ads&utm_campaign=atmz_col_bs_vw_posventavw_ga_sem_cpc&utm_content=Variaciones_Posventa_KW&gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKOopfSiu7YyxSKeorOZZ1gg9DrUkQ614XG9bb_QhWvU3ycQ6PSFfQaApogEALw_wcB/" target="blank">LinkedingVW/Col</a>
+    </ul>
 
-     <h3> Video de presentación </h3>
-     <div style="text-align: center;"> 
-     <iframe width="650" height="370" alt="250" src="https://www.youtube.com/embed/BfC6UU4p_0E?si=7uWQIUibludwJ6YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-
-    <div style="text-align: center;">
-      <h2> VolksWagen-Berlín</h2>
-      <a href="https://www.volkswagen-automobile-berlin.de/neuwagen/volkswagen?etcc_med=SEA&etcc_par=Google&etcc_cmp=2023-VW-PKW&etcc_grp=158639679755&etcc_bky=vw%20volkswagen&etcc_mty=b&etcc_plc=&etcc_ctv=688115023407&etcc_bde=c&etcc_var=CjwKCAjwrcKxBhBMEiwAIVF8rO7XiCrvEekzbe7NkYcd9IUYcp7D0yrIPyTXeIaUgMLZjW05LWtqJxoCvHEQAvD_BwE&gad_source=1&gclid=CjwKCAjwrcKxBhBMEiwAIVF8rO7XiCrvEekzbe7NkYcd9IUYcp7D0yrIPyTXeIaUgMLZjW05LWtqJxoCvHEQAvD_BwE/" target="_blank">Volkswagen-Automobile-Berlin</a>
-      </div>
-
-      <table>
-         <hr>
-         <!-- Formulario -->
-         <div style="text-align: center;">
-         <h2>Formulario</h2>
-       </table>
-<form method="POST">   
-<fieldset>
-    <!--Campo de texto-->
-     <legend>Información Personal</legend>
-     <label for="">Nombre</label>
-     <input type="text" placeholder="Nombre" name="Nombre">
-    <br>
-
-   <!--Cedula-->
-    <label for=""> Cedula:</label>
-    <input type="number"  id="Cedula" required placeholder="Cedula">
-    <br>
-
-   <!--Fecha de Nacimiento-->
-    <label for="">Fecha de nacimiento</label>
-    <input type="date" id="fecha_nacimiento" required min="1960-01-01" max="2024-12-31" value="2024-12-31" name="fecha_nacimiento">
-     <br>
-
-   <!--Dirección-->
-    <label for="">Dirección</label>
-    <input type="text" placeholder="Ingrese su Dirección" name="Dirección">
-     <br>
-
-</fieldset>
-
-<fieldset>
-   <!--Seleccion de ciudad-->
-  <label for="">Escoja su Ciudad</label>
-  <select name="" id="">
-      <option value=""></option>
-      <option value="Berlín">Berlín</option>
-      <option value="Múnich">Múnich</option>
-      <option value="Ausgurgo">Ausburgo</option>
-      <option value="Neuss">Neuss</option>
-      <option value="Wuppertal">Wuppertal</option>
-      <option value="Lübeck">Lübeck</option>
-      <option value="Gelsenkirchen">Gelsenkirchen</option>
-      <option value="Darmstadt">Darmstadt</option>
-      <option value="Wurzburgo">Wurzburgo</option>
-      <option value="Bonn">Bonn</option>
-   </select>
-
-
-   <!--Correo Electronico-->
-   <legend>Información de Contacto</legend>
-    <label for="email">Correo Electronico</label>
-    <input type="email" required placeholder="Ingresar Correo" name="email">
-   <br>
-
-</fieldset>
-
-<fieldset>
-
-   <!--Documentos Anexos-->
-   <legend>Anexar Documentos</legend>
-    <label for="">Subir Documentos</label>
-    <input type="file"required placeholder="Anexar Documentos" accept="img/*" name="Anexar_Documentos">
-
-</fieldset>
-
-   <!--Envíar-->
-    <button for="">Enviar Formulario</button>
-   <br>
-    <div style="text-align: center;">
-    <table style="background-color: rgb(255, 255, 255);">
-       <!--Encabezado-->
-      <h1>Tabla de Datos</h1>
-
-      <div style="text-align: center;">
-    <tr style="background-color: rgb(87, 189, 193);">
-        <th style="border: 3px solid black">Mes</th>
-        <th style="border: 3px solid black">Ventas (€)</th>
-        <th style="border: 3px solid black">Año</th>
-        <th style="border: 3px solid black">Total de ventas del año</th>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Enero</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr> 
-        <td style="border: 3px solid black">Febrero</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Marzo</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Junio</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Julio</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Agosto</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Septiembre</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Octubre</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Noviembre</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-    </tr>
-    <tr>
-        <td style="border: 3px solid black">Diciembre</td>
-        <td style="border: 3px solid black">7.250.000</td>
-        <td style="border: 3px solid black">2023</td>
-        <td style="border: 3px solid black">87.000 Millones de Euros</td>
+    <div class="Video">
+        <div style="text-align: center;"> 
+        <iframe width="650" height="370" alt="250" src="https://www.youtube.com/embed/BfC6UU4p_0E?si=7uWQIUibludwJ6YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    </tr>
-   </table> 
-<br>
-</div>
+
+    <div style="text-align: center;">
+        <h2> VolksWagen-Berlín</h2>
+        <a class="Enlace" href="https://www.volkswagen-automobile-berlin.de/neuwagen/volkswagen?etcc_med=SEA&etcc_par=Google&etcc_cmp=2023-VW-PKW&etcc_grp=158639679755&etcc_bky=vw%20volkswagen&etcc_mty=b&etcc_plc=&etcc_ctv=688115023407&etcc_bde=c&etcc_var=CjwKCAjwrcKxBhBMEiwAIVF8rO7XiCrvEekzbe7NkYcd9IUYcp7D0yrIPyTXeIaUgMLZjW05LWtqJxoCvHEQAvD_BwE&gad_source=1&gclid=CjwKCAjwrcKxBhBMEiwAIVF8rO7XiCrvEekzbe7NkYcd9IUYcp7D0yrIPyTXeIaUgMLZjW05LWtqJxoCvHEQAvD_BwE/" target="_blank">Volkswagen-Automobile-Berlin</a>
+    </div>
+   
+        <h2 class="Titulo">Formulario</h2>
+
+        <form class="Formulario" method="post" onsubmit="mostrarDatos(); return false;">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="">Nombre</label>
+                <input type="text" placeholder="Nombre" required name="Nombre">
+                <label for=""> Cedula:</label>
+                <input type="number"  id="Cedula" required placeholder="Cedula">
+                <label for="">Fecha de nacimiento</label>
+                <input type="date" id="fecha_nacimiento" required min="1960-01-01" max="2024-12-31" value="2024-12-31" name="fecha_nacimiento">
+                <label for="">Dirección</label>
+                <input type="text" placeholder="Ingrese su Dirección" name="Dirección">
+            </fieldset>
+
+            <fieldset>
+                <label for="">Escoja su Ciudad</label>
+                <select name="" id="">
+                    <option value=""></option>
+                    <option value="Berlín">Berlín</option>
+                    <option value="Múnich">Múnich</option>
+                    <option value="Ausgurgo">Ausburgo</option>
+                    <option value="Neuss">Neuss</option>
+                    <option value="Wuppertal">Wuppertal</option>
+                    <option value="Lübeck">Lübeck</option>
+                    <option value="Gelsenkirchen">Gelsenkirchen</option>
+                    <option value="Darmstadt">Darmstadt</option>
+                    <option value="Wurzburgo">Wurzburgo</option>
+                    <option value="Bonn">Bonn</option>
+                </select>
+
+               <legend>Información de Contacto</legend>
+               <label for="email">Correo Electronico</label>
+               <input type="email" required placeholder="Ingresar Correo" name="email">
+            </fieldset>
+ 
+            <fieldset>
+                <legend>Anexar Documentos</legend>
+                <label for="">Subir Documentos</label>
+                <input type="file"required placeholder="Anexar Documentos" accept="img/*" name="Anexar_Documentos">
+            </fieldset>
+
+           <button type="submit">Enviar</button>
+        <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-family: Arial, sans-serif;
+            border: 2px solid #a60303;
+       }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #a60303;
+            text-align: left;
+       }
+        table th {
+            background-color: #a60303;
+            color: #ffffff;
+            font-weight: bold;
+       }
+        table tr:nth-child(even) {
+            background-color: #3a3a3a;
+       }
+        table tr:hover {
+            background-color: #9dff00;
+        }
+        </style>
+       </head>
+       <body>
+        <div style="text-align: center;">
+     <h1>Tabla De Ventas 2023</h1>
+       <table>
+           <thead>
+              <tr>
+                <th>Mes</th>
+                <th>Ventas/Euros (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Enero</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Febrero</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Marzo</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Junio</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Julio</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Agosto</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Septiembre</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Octubre</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Noviembre</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Diciembre</td>
+                <td>7.250.000</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>87.000.000.000</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+        function mostrarDatos() {
+            var nombre = document.getElementById("nombre").value;
+            var celuda = document.getElementById("cedula").value;
+            var fechaNacimiento = document.getElementById("fecha_de_nacimiento").value;
+            var direccion = document.getElementById("direccion").value;
+            var ciudad = document.getElementById("ciudad").value;
+            var correo = document.getElementById("correo").value;
+        }
+    function cambiarColorPagina() {
+        var colorSeleccionado = document.getElementById("color-pagina").value;
+        var body = document.body;
+        var contenido = document.querySelector(".Contenido");
+        var titulos = document.querySelectorAll(".Titulo");
+        var subtitulos = document.querySelectorAll(".Subtitulo");
+        var parrafos = document.querySelectorAll(".Parrafo");
+        var listas = document.querySelectorAll(".Lista-ol, .Lista-ul");
+        var enlaces = document.querySelectorAll(".Enlace");
+        var formulario = document.querySelector(".Formulario");
+        var fieldsets = document.querySelectorAll("fieldset");
+        var legends = document.querySelectorAll("legend");
+        var labels = document.querySelectorAll("label");
+        var inputs = document.querySelectorAll("input, textarea, select");
+        var tabla = document.querySelector(".Tabla-De-Ventas-2023");
+        
+    if (colorSeleccionado === "dark") {
+            // Colores del Tema Oscuro
+            body.style.backgroundColor ="#212121";
+            body.style.color = "#ffffff";
+            contenido.style.backgroundColor = "#ffffff";
+            contenido.style.color = "#000000";
+            titulos.forEach(titulo => titulo.style.color = "#ffffff");
+            subtitulos.forEach(subtitulo => subtitulo.style.color = "#ffffff");
+            parrafos.forEach(parrafo => parrafo.style.color = "#ffffff");
+            listas.forEach(lista => lista.style.color = "#FFFFFF");
+            enlaces.forEach(enlace => enlace.style.color = "#98FB98");
+            formulario.style.backgroundColor = "#263238";
+            formulario.style.borderColor = "#ffffff";
+            fieldsets.forEach(fieldset => fieldset.style.borderColor = "#F2C9D1");
+            legends.forEach(legend => legend.style.color = "#ffffff");
+            labels.forEach(label => label.style.color = "ffffff");
+            inputs.forEach(input => {
+                input.style.backgroundColor = "#000000";
+                input.style.borderColor = "#000000";
+                input.style.color = "#ECEFF1";
+        ;
+        });
+        
+        tabla.style.backgroundColor = "#FFA726";
+        } else if (colorSeleccionado === "Random") {
+            // Colores del Tema Colorido
+            body.style.backgroundColor = "#FF9E80";
+            body.style.color = "#00000";
+            contenido.style.backgroundColor = "#FFCCBC";
+            contenido.style.color = "#000000";
+            titulos.forEach(titulo => titulo.style.color = "#DD2C00");
+            subtitulos.forEach(subtitulo => subtitulo.style.color = "#5E57C2");
+            parrafos.forEach(parrafo => parrafo.style.color = "#000000");
+            listas.forEach(lista => lista.style.color = "#000000");
+            enlaces.forEach(enlace => enlace.style.color = "#F50057");
+            formulario.style.backgroundColor = "#020232";
+            formulario.style.borderColor = "#dc143c";
+            fieldsets.forEach(fieldset => fieldset.style.borderColor = "#FF4081");
+            legends.forEach(legend => legend.style.color = "#FFFFFF");
+            labels.forEach(label => label.style.color = "#FFFFFF");
+            inputs.forEach(input => {
+                input.style.backgroundColor = "#fff5ee";
+                input.style.borderColor = "#FFFFFF";
+                input.style.color = "#000000";
+            });
+            tabla.style.backgroundColor = "#ffefd5";
+        } else {
+            // Colores del Tema Claro (por defecto)
+            body.style.backgroundColor = "#f0f4f8";
+            body.style.color = "#2f2d2d";
+            contenido.style.backgroundColor = "#ffffff";
+            contenido.style.color = "#2f2d2d";
+            titulos.forEach(titulo => titulo.style.color = "#003366");
+            subtitulos.forEach(subtitulo => subtitulo.style.color = "#ff6600");
+            parrafos.forEach(parrafo => parrafo.style.color = "#000000");
+            listas.forEach(lista => lista.style.color = "#003366");
+            enlaces.forEach(enlace => enlace.style.color = "#003366");
+            formulario.style.backgroundColor = "#f9f9f9";
+            formulario.style.borderColor = "#ccc";
+            fieldsets.forEach(fieldset => fieldset.style.borderColor = "#003366");
+            legends.forEach(legend => legend.style.color = "#003366");
+            labels.forEach(label => label.style.color = "#003366");
+            inputs.forEach(input => {
+                input.style.backgroundColor = "#fff";
+                input.style.borderColor = "#ccc";
+                input.style.color = "#00000";
+            });
+            tabla.style.backgroundColor = "#f2f2f2";
+        }
+    }
+
+    function cambiarTamanoLogo() {
+        var tamanoSeleccionado = document.getElementById("tamano-logo").value;
+        var logo = document.querySelector(".Imagen_logo");
+
+        if (tamanoSeleccionado === "pequeno") {
+            logo.style.width = "100px";
+        } else if (tamanoSeleccionado === "normal") {
+            logo.style.width = "200px";
+        } else if (tamanoSeleccionado === "grande") {
+            logo.style.width = "300px";
+        } else if (tamanoSeleccionado === "extra_grande") {
+            logo.style.width = "400px";
+        }
+    }
+    </script>
 </body>
-<script>
-
-    function cambiarTema(){
-        var body = document.getElementById("body")
-        var tema = document.getElementById("tema").value
-        var fondo = ""
-        var letra = ""
-        if(tema == "light"){
-            fondo = "white"
-            letra = "black"
-        } else if(tema == "dark"){
-            fondo = "black"
-            letra = "white"
-        } else if(tema == "crazy"){
-            fondo = "violet"
-            letra = "#47033a"        }
-        body.style.backgroundColor = fondo
-        body.style.color = letra
-    } 
-
-    function enviarFormulario(){
-        var nombre = document.getElementById("Nombre").value
-        var cedula = document.getElementById("Apellidos").value
-        var fecha_de_nacimiento = document.getElementById("Fecha de nacimiento").value
-        var direccion = document.getElementById("Dirección").value
-        var escoja_su_ciudad = document.getElementById("Escoja su dirección").value
-        var correo_electronico = document.getElementById("Correo Electronico").value
-        var subir_documentos = document.getElementById("Subir Documentos").value
-
-        if(nombre && apellidos){
-            alert("Los datos del formulario son: " + nombre + " " + cedula + " " + fecha_de_nacimiento + " " + direccion + " " + escoja_su_ciudad + " " + correo_electronico + " " + subir_documentos)
-        }
-    }
-
-    function cambiarTamanoLogo(tamano){
-        var logo = document.getElementById("logo")
-        var tamanoLogo = 0
-        if(tamano == "small"){
-            tamanoLogo = 300
-        }else if(tamano == "medium"){
-            tamanoLogo = 600
-        }else if(tamano == "large"){
-            tamanoLogo = 900
-        }
-        logo.style.width = tamanoLogo + "px"
-    }
-</script> 
-
-
 </html>
