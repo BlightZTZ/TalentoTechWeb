@@ -1,0 +1,89 @@
+[
+    {
+        "Nombre": "Carlos",
+        "Apellidos": "Rodriguez",
+        "Edad": "27",
+        "Mascotas": [
+            {
+                "Nombre": "Atún",
+                "Tipo": "Gato"
+            },
+            {
+                "Nombre": "Rocky",
+                "Tipo": "Perro"
+            }
+        ]
+    },
+    {
+        "Nombre": "Ismael",
+        "Apellidos": "Alvares",
+        "Edad": "52",
+        "Mascotas": [
+            {
+                "Nombre": "Chandoso",
+                "Tipo": "Perro"
+            }
+        ]
+    },
+    {
+        "Nombre": "Marta",
+        "Apellidos": "Peñalosa",
+        "Edad": "34",
+        "Mascotas": [
+            {
+                "Nombre": "Bruno",
+                "Tipo": "Perro"
+            },
+            {
+                "Nombre": "Luna",
+                "Tipo": "Perro"
+            }
+        ]
+    },
+    {
+        "Nombre": "Nelson",
+        "Apellidos": "Mendez",
+        "Edad": "21",
+        "Mascotas": [
+            {
+                "Nombre": "Luis",
+                "Tipo": "Loro"
+            }
+        ]
+    },
+    {
+        "Nombre": "Luis",
+        "Apellidos": "Morales",
+        "Edad": "19",
+        "Mascotas": [
+            {
+                "Nombre": "Marcos",
+                "Tipo": "Pez"
+            }
+        ]
+    },
+    {
+        "Nombre": "Alvaro",
+        "Apellidos": "Mendoza",
+        "Edad": "16",
+        "Mascotas": [
+            {
+                "Nombre": "Tostito",
+                "Tipo": "Perico"
+            }
+
+        ]
+    },
+    {
+        "Nombre": "Wilson",
+        "Apellidos": "Sanchez",
+        "Edad": "65",
+        "Mascotas": [
+            {
+                "Nombre": "Coffe",
+                "Tipo": "Tortuga"
+            }
+
+        ]
+    } 
+ ]

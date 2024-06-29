@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    /*Implementar Array de paises*/
+    var Paises =["Alemania" , "Belgica" , "Amsterdam"]
+    Paises.push("Colombia")
+    document.write(Paises)
+    document.write("<br>")  
+    /** Implementar algoritmo que me permita ingresar 5 personas,
+     * agregandolas de invitados e imprimir sus nombres y la cantidad total
+     */
+    var nombre
+    var cantidadInvitados = parseInt(prompt("Ingrese la cantidad de personas"))
+    var invitados = []
+    for(var i=0; i<cantidadInvitados; i++){ // Se hace 5 veces
+         nombre = prompt("Ingrese el nombre del invitado: ")
+         invitados.push(nombre)
+    }
+    document.write("Los invitados son: " + invitados + "<br>")
+    document.write("La cantiad de invitados es: " + invitados.length) 
+    /** Hacer un algoritmo que almacene en una matriz, las notas por periodo
+     * y la recorra, saque los promedios por periodo y la nota final
+     */
+    var matriz = [
+        [4.1, 2 , 3, 5], // Primer Periodo
+        [2.8, 1.3, 3.1, 2.9], // Segundo Periodo
+        [2.4, 1.3, 4.2, 0.5], // Tercer Periodo
+        [4.7, 5, 3.6, 2.3], // Cuarto Periodo 
+        ] 
+    var notaPeriodo = 0
+    var acumulado = 0
+       
+       for(var i=0; i<matriz.length; i++){
+        document.write(matriz[i] + "<br>")
+
+          for(var j=0; j<matriz[i].length; j++){
+              notaPeriodo = notaPeriodo+matriz[i][j]/matriz[i].length
+          }
+          notaPeriodo=notaPeriodo/matriz[i].length
+          document.write("La nota del periodo " + i +" es" +notaPeriodo + "<br>")
+          acumulado=acumulado+notaPeriodo
+          notaPeriodo=0
+       }
+       document.write("La nota del final es:"+ acumulado/matriz.length)
+</script> 
+</body>
+</html>

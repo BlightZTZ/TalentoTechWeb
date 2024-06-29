@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+     /**
+     * Implementar una cuenta regresiva para el despegue de una nave, 
+     * comenzando en 15 e imprimir: "Despegue en" y el número de la ceunta
+     * cuando la cuenta llegue a 0, imprimir "Buen Viaje"
+     * Cuando la cuenta vaya en 10 imprimir, "Encendiendo motores"
+     */
+   var cronometro = 15 // Inicio
+   while(cronometro > 0){ // Condicion de salida
+     document.write("Despegue en:" + cronometro + "<br>")
+     if(cronometro == 10){
+        document.write("Encendiendo motores <br>")
+     }
+     cronometro-- // Incremento o Decrenmento
+   }  
+   document.write("Buen Viaje")
+  /**
+   * Escribe un programa que inicie mostrando en pantalla la letra de "Un elefante se balanceaba"
+   * iniciando con el número 1,
+   * despues preguta al usuario cuantos elefantes más se balancearán y 
+   * debe responder un número mostrado.
+   * En caso de ingresar un número diferente pedirle que intente de nuevo y repetir el ciclo hasta tener 10 elefantes
+   * que tomar en cuenta cuando el texto muestra un solo elefante y varios elefantes.
+   */
+ var texto ="Elefante se balanceaba sobre la tela de una araña, como veaia que resistia llamaron a otro elefante"
+ var elefantes = parseInt(prompt("Ingrese los elefantes"))
+ var contador = 1
+ var textoElefante = "Elefante"
+ while(contador < elefantes){
+  if(contador != 1){
+      textoElefante = "Elefantes"
+  }
+    document.write(contador + " " + textoElefante + " " + texto + "<br>")
+    contador++
+ }
+ /**
+  * Imprimir los números del 1 al 10 */
+ // Inicio;   Salida;   Incremento
+ for(var num =0; num<=10; num+=2){
+    document.write("El número es: " + num + "<br>")
+ }
+ //* Cronometro */
+ for(var i=10; i>0; i--){
+   document.write("Tick Tack" + i + "<br>")
+ }
+ document.write("Boom")
+    
+</script>
+</body>
+</html>
